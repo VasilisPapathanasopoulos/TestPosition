@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "MOxDJs1rSzs=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\PapathanasopoulosAle\\OneDrive - PYRAMIS METALLOYRGIA AE\\Επιφάνεια εργασίας\\TestAPI\\api\\api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\PapathanasopoulosAle\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.0\\microsoft.aspnetcore.openapi.9.0.0.nupkg.sha512",
+    "C:\\Users\\PapathanasopoulosAle\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}

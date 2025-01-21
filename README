@@ -1,0 +1,49 @@
+        Overview of Position API 
+
+A simple web service build with ASP.NET Core. 
+It allows user to add or retrieve positions through endpoints to an SQL Server db. 
+The database includes name, latitude and longtitude.
+
+        Features:
+GET ---> /api/PositionController: Retrieves positions.
+POST---> /api/PositionController: Adds new position
+
+|---------------------------------------------------------------------------------|
+
+GET: 
+-Fetches all positions fron the positions table in the SQL Server db, ordered by pos_name
+
+-Query: SELECTS pos name, lat and lon re-naming them for the JSON. 
+
+-Fetches data using SqlDataAdapter (fetches data in one step)
+
+
+|---------------------------------------------------------------------------------|
+
+POST:
+-Add a new position to the positions table in the db
+        Error handling and validation: 
+-Checks if "position" object is null or if "Name" is empty. If fails returns bad request. 
+-If name exists it handles exception and returns response 
+
+|---------------------------------------------------------------------------------|
+
+Database Setup
+
+In the SQL server:
+CREATE TABLE positions (
+    pos_name NVARCHAR(64) PRIMARY KEY UNIQUE NOT NULL,
+    pos_lat FLOAT NOT NULL,
+    pos_lon FLOAT NOT NULL
+);
+
+In the appsettings.json (injects configurations in code), ensure to input the server and database name.
+
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=;Database=;Trusted_Connection=True;"
+  }
+}
+
+|---------------------------------------------------------------------------------|
+
